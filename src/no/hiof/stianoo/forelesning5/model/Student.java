@@ -1,11 +1,15 @@
 package no.hiof.stianoo.forelesning5.model;
 
+import java.util.ArrayList;
+
 public class Student {
 
     private String firstName;
     private String lastName;
     private int age;
     private String studentId;
+    private Course favouriteCourse;
+    private ArrayList<Course> courses = new ArrayList<>();
 
     public Student() {
 
@@ -16,6 +20,14 @@ public class Student {
         this.lastName = lastName;
         this.age = age;
         this.studentId = studentId;
+    }
+
+    public ArrayList<Course> getCourses() {
+        return courses;
+    }
+
+    public void setCourse(ArrayList<Course> courses) {
+        this.courses = courses;
     }
 
     public String getFirstName() {
@@ -56,5 +68,13 @@ public class Student {
 
     public void setStudentId(String studentId) {
         this.studentId = studentId;
+    }
+
+    public Course getFavouriteCourse() {
+        return favouriteCourse;
+    }
+
+    public void setFavouriteCourse(Course favouriteCourse) {
+        this.favouriteCourse = favouriteCourse;
     }
 }
